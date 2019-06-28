@@ -41,8 +41,9 @@ app.post("/register", async (req, res) => {
   const new_user = new User({
     name: req.body.name,
     email: req.body.email,
-    password: req.body.password
+    password: req.body.psw
   })
+  console.log(new_user)
   await new_user.save()
   const users = await User.find()
   res.render("index", { users })
