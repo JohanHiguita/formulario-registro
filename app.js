@@ -41,7 +41,7 @@ app.post("/register", async (req, res) => {
   const new_user = new User({
     name: req.body.name,
     email: req.body.email,
-    password: req.body.psw
+    password: req.body.password
   })
   console.log(new_user)
   await new_user.save()
